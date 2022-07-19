@@ -46,9 +46,11 @@ java -jar gatk-4.2.6.1/gatk-package-4.2.6.1-local.jar MarkDuplicates VALIDATION_
 samtools index Merged_readfiles_rmdup.bam
 
 #creating dict file for variant calling
-java -jar ./gatk-4.2.6.1/gatk-package-4.2.6.1-local.jar CreateSequenceDictionary -R chr16.fa -O Merged_readfiles_variant.dict
+java -jar ./gatk-4.2.6.1/gatk-package-4.2.6.1-local.jar CreateSequenceDictionary -R chr16.fa -O chr16.dict
 
 #variant calling using haplotypecaller
+java -jar ./gatk-4.2.6.1/gatk-package-4.2.6.1-local.jar HaplotypeCaller -R chr16.fa -I Merged_readfiles_rmdup.bam -O Merged_readfiles_variant.vcf
+
 
 
 
