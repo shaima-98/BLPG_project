@@ -42,6 +42,15 @@ samtools merge -o Merged_readfiles.bam Blond_1_sorted.bam Blond_2_sorted.bam Blo
 #removing duplicates
 java -jar gatk-4.2.6.1/gatk-package-4.2.6.1-local.jar MarkDuplicates VALIDATION_STRINGENCY=SILENT I=Merged_readfiles.bam O=Merged_readfiles_rmdup.bam REMOVE_DUPLICATES=true M=Merged_readfiles_rmdup.metrics
 
+#indexing file
+samtools index Merged_readfiles_rmdup.bam
+
+#creating dict file for variant calling
+java -jar ./gatk-4.2.6.1/gatk-package-4.2.6.1-local.jar CreateSequenceDictionary -R chr16.fa -O Merged_readfiles_variant.dict
+
+#variant calling using haplotypecaller
+
+
 
 
 
