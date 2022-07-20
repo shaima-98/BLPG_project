@@ -51,6 +51,7 @@ java -jar ./gatk-4.2.6.1/gatk-package-4.2.6.1-local.jar CreateSequenceDictionary
 #variant calling using haplotypecaller
 java -jar ./gatk-4.2.6.1/gatk-package-4.2.6.1-local.jar HaplotypeCaller -R chr16.fa -I Merged_readfiles_rmdup.bam -O Merged_readfiles_variant.vcf
 
+#variant annotation
 
 
 
