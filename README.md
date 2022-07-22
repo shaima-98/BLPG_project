@@ -57,7 +57,7 @@ java -Xmx6g -jar ./snpEff/snpEff.jar -v GRCh38.105 Merged_readfiles_variant.vcf 
 
 #variant annotation with clinvar
 gunzip clinvar.vcf.gz
-java -jar ./snpEff/SnpSift.jar annotate clinvar.vcf Merged_readfiles_variant.vcf > Merged_readfiles_variant_dbann.vcf
+java -jar ./snpEff/SnpSift.jar annotate clinvar.vcf Merged_readfiles_variant_ann.vcf > Merged_readfiles_variant_dbanno.vcf
 
 
 
