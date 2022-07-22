@@ -53,6 +53,7 @@ java -jar ./gatk-4.2.6.1/gatk-package-4.2.6.1-local.jar CreateSequenceDictionary
 java -jar ./gatk-4.2.6.1/gatk-package-4.2.6.1-local.jar HaplotypeCaller -R chr16.fa -I Merged_readfiles_rmdup.bam -O Merged_readfiles_variant.vcf
 
 #variant annotation
+java -Xmx6g -jar ./snpEff/snpEff.jar -v GRCh38.105 Merged_readfiles_variant.vcf > Merged_readfiles_variant_ann.vcf
 
 
 
