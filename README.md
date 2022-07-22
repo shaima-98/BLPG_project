@@ -55,6 +55,10 @@ java -jar ./gatk-4.2.6.1/gatk-package-4.2.6.1-local.jar HaplotypeCaller -R chr16
 #variant annotation
 java -Xmx6g -jar ./snpEff/snpEff.jar -v GRCh38.105 Merged_readfiles_variant.vcf > Merged_readfiles_variant_ann.vcf
 
+#variant annotation with clinvar
+gunzip clinvar.vcf.gz
+java -jar ./snpEff/SnpSift.jar annotate clinvar.vcf Merged_readfiles_variant.vcf > Merged_readfiles_variant_dbann.vcf
+
 
 
 
