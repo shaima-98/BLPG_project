@@ -1,4 +1,5 @@
 # BLPG_project
+cd /mnt/c/Genespectrum_BLPG/Project
 gunzip chr16.fa.gz
 
 #indexing the ref genome
